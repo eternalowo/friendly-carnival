@@ -1,16 +1,21 @@
 #include <iostream>
+#include <chrono>
 
 #include "singly_linked_list.h"
 
 int main() {
-	auto help = linked_list::Singly_Linked_List<int>();
-	int i = 2;
-	help.push_back(i);
-	help.push_back(2);
-	help.push_back(4);
-	help.push_back(3);
-	help.insert(99, 3);
-	help.update(99, 1);
-	std::cout << help;
+
+	auto singly_one = linked_list::Singly_Linked_List<int>();
+
+	singly_one.insert_back(3);
+	singly_one.insert_back(4);
+	singly_one.insert_back(5);
+	singly_one.insert_back(6);
+
+	singly_one.insert_forward(55);
+	singly_one.insert_forward(-55);
+
+	std::cout << singly_one << std::endl;
+
 	return 0;
 }
